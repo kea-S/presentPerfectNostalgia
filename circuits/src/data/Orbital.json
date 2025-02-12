@@ -1,0 +1,21 @@
+{
+    "title": "ReVerb",
+    "association": "National University of Singapore",
+    "hyperlink": "https://re-verb-app.vercel.app",
+    "brief": "A music training app and toolkit",
+    "stack": ["React", "MongoDB", "Express", "Node", "JavaScript"],
+    "descriptor": {
+        "media": "path/to/img.png",
+        "detail": "ReVerb is a music training app and toolkit, designed to be a musician’s best friend by providing industry standard tools at convenience, as well as providing motivation for both returning musicians and curious souls eager to start their musical journey",
+        "portfolios": {
+            "one": {
+                "header": "CRUD Metronome",
+                "descriptor": "Built a fully functional metronome with adjustable BPM and time signature, along with a database for storing song settings, including BPM, time signature, name, and artist. Users can quickly load saved songs to configure the metronome instantly. The system also supports basic CRUD operations for managing stored songs."
+            },
+            "two": {
+                "header": "Music Quizzing Platform",
+                "descriptor": "Built an expandable database of custom-made quizzes utilising MongoDB, structured into sequential journeys for users to complete. A hearts system discourages brute-forcing answers, ensuring meaningful engagement. Various question formats, including rhythmic, aural, and visual, offer diverse challenges, with modular combinations allowing six unique question-and-answer pairings to maintain user interest."
+            }
+        }
+    }
+}

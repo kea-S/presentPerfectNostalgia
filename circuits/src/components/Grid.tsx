@@ -1,19 +1,22 @@
-import { useState, useEffect } from "react"
 import ImageBox from "./ImageBox"
 import KeaHarvanBox from "./KeaHarvanBox"
 import ProjectBox from "./ProjectBox"
 
+import { useState, useEffect } from "react"
+
+import reVerb from '../data/Orbital.json';
+
 function Grid() {
     const cells = [
         <KeaHarvanBox key="1" />,
-        <ProjectBox key="2" />,
-        <ProjectBox key="3" />,
-        <ProjectBox key="4" />,
-        <ProjectBox key="5" />,
+        <ProjectBox key="2" data={reVerb}/>,
+        <ProjectBox key="3" data={reVerb}/>,
+        <ProjectBox key="4" data={reVerb}/>,
+        <ProjectBox key="5" data={reVerb}/>,
         <ImageBox key="6" />,
         <ImageBox key="7" />,
-        <ProjectBox key="8" />,
-        <ProjectBox key="9" />,
+        <ProjectBox key="8" data={reVerb}/>,
+        <ProjectBox key="9" data={reVerb}/>,
     ];
 
     const [numberCols, setNumberCols] = useState<number>(1)
