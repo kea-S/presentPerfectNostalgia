@@ -11,10 +11,11 @@ export interface ProjectDescriptor {
       descriptor: string;
     };
   };
-}
+};
+
 export interface ProjectData {
   title: string;
-  association: string;
+  role: string;
   hyperlink: string;
   brief: string;
   stack: string[];

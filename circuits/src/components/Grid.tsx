@@ -5,14 +5,15 @@ import ProjectBox from "./ProjectBox"
 import { useState, useEffect } from "react"
 
 import reVerb from '../data/Orbital.json';
+import shep from '../data/Shep.json';
 
 function Grid() {
     const cells = [
         <KeaHarvanBox key="1" />,
         <ProjectBox key="2" data={reVerb}/>,
-        <ProjectBox key="3" data={reVerb}/>,
+        <ProjectBox key="3" data={shep}/>,
         <ProjectBox key="4" data={reVerb}/>,
-        <ProjectBox key="5" data={reVerb}/>,
+        <ProjectBox key="5" data={shep}/>,
         <ImageBox key="6" />,
         <ImageBox key="7" />,
         <ProjectBox key="8" data={reVerb}/>,
@@ -49,7 +50,8 @@ function Grid() {
     return (
         <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5 gap-y-12.5 mx-12.5 my-10">
             {rows.map((row, rowIndex) => (
-                <div key={rowIndex} className={`col-span-full ${rowIndex % 2 === 1 ? 'bg-white text-black' : ''}`}>
+                <div key={rowIndex} className={`col-span-full ${rowIndex % 2 === 1 ? 'bg-white text-black [&_*]:border-black' 
+: 'bg-black text-white [&_*]:border-white'}`}>
                     <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5">
                         {row.map((item, colIndex) => (
                             <div key={colIndex}>

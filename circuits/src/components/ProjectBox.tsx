@@ -2,11 +2,12 @@ import { ProjectData } from '../types.ts';
 
 import Box from './box.tsx'
 import ProjectModal from './ProjectModal.tsx';
+import List from './list.tsx';
 
 import { useState } from 'react';
 
 interface ProjectProps {
-    data: ProjectData
+    data: ProjectData;
 }
 
 function ProjectBox({ data }: ProjectProps) {
@@ -18,16 +19,18 @@ function ProjectBox({ data }: ProjectProps) {
     return (
         <div onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
             <Box>
-                <header>
-                    <h1>{data.title}</h1>
+                <header className='mx-2 py-2'>
+                    <h1 className='font-semibold text-5xl'>{data.title}</h1>
                 </header>
-                <main>
-                    <h2>{data.association}</h2>
-                    <p>{data.brief}</p>
-                    <h3>{data.stack}</h3> {/* new component here*/}
+                <main className='my-5 mx-3'>
+                    <h2 className='text-lg font-medium'>{data.role}</h2>
+                    <p className='my-3 w-80'>{data.brief}</p>
                 </main>
+                <footer className='mx-2'>
+                    <List array={data.stack}/>
+                </footer>
             </Box>
-            <ProjectModal isOpen={isModalOpen} descriptor={data.descriptor} title={data.title}/>
+            <ProjectModal isOpen={isModalOpen} descriptor={data.descriptor} title={data.title} footer={data.stack}/>
         </div>
     )
 }

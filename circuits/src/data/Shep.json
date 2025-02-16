@@ -1,0 +1,21 @@
+{
+    "title": "Shep",
+    "role": "Java Developer",
+    "hyperlink": "https://re-verb-app.vercel.app",
+    "brief": "A GUI task-managing chatbot",
+    "stack": ["Java", "JavaFX", "Gradle"],
+    "descriptor": {
+        "media": "/shepScreen.png",
+        "detail": "Shep is a GUI task tracking app designed for text based inputs. Shep was developed as a brown-field iterative breadth first project stemming from Duke, a chatbot developed for NUS's intro to Software Engineering Course.",
+        "portfolios": {
+            "one": {
+                "header": "Task Manager",
+                "descriptor": "Users can add different types of tasks with different attributes, such as to-dos, deadlines, and events. Users can mark tasks as done, delete tasks, and listing all current tasks."
+            },
+            "two": {
+                "header": "Storage",
+                "descriptor": "A storage component to ensure that task data is persistently managed across user sessions. Whenever a user is done with a session, the storage component writes to a file. Launching Shep reads from said file."
+            }
+        }
+    }
+}

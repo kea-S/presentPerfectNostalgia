@@ -8,11 +8,16 @@ interface ModalProps {
 function Modal({ isOpen, children }: ModalProps) {
 
     return (
-        <div style={{pointerEvents: 'none'}}>
-            {isOpen && <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                {children}
-            </div>}
-        </div>
+        <>
+            {isOpen && 
+                <div style={{pointerEvents: "none"}}
+                    className="fixed top-1/2 left-1/2
+                    transform -translate-x-1/2 -translate-y-1/2 
+                    bg-black text-white w-192 h-176 border 
+                    [&_*]:!border-white !border-white p-4">
+                    {children}
+                </div>}
+        </>
     );
 }
 
