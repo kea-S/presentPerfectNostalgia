@@ -1,0 +1,21 @@
+{
+    "title": "Face Recogniser",
+    "role": "AI Model Trainer",
+    "hyperlink": "https://re-verb-app.vercel.app",
+    "brief": "Facial recognition software under PT. ADI CITRA SAKTI",
+    "stack": ["Python", "NumPy", "OpenCV", "PyTorch"],
+    "descriptor": {
+        "media": "/faceRecog.png",
+        "detail": "During the winter break of 2024, I joined a team tasked to build a facial recognition system under PT. ADI CITRA SAKTI. The system would need to identify employee's from live CCTV input and send Pub/Sub messages to a server.",
+        "portfolios": {
+            "one": {
+                "header": "Model Trainer",
+                "descriptor": "I was responsible for maximizing the model's precision. This was done through hyperparameter tuning, image augmentation, and dataset preparation. In order to measure performance, I created an evaluation framework with the help of NumPy."
+            },
+            "two": {
+                "header": "",
+                "descriptor": ""
+            }
+        }
+    }
+}

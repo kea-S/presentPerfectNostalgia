@@ -3,18 +3,18 @@
     "role": "Full Stack Developer",
     "hyperlink": "https://re-verb-app.vercel.app",
     "brief": "A music training web app and toolkit",
-    "stack": ["React", "MongoDB", "Express", "Node", "JavaScript"],
+    "stack": ["React", "MongoDB", "Express", "JavaScript"],
     "descriptor": {
         "media": "/reVerbScreen.png",
         "detail": "ReVerb is a music training app and toolkit, designed to be a musician’s best friend by providing industry standard tools at convenience, as well as providing motivation for both returning musicians and curious souls eager to start their musical journey.",
         "portfolios": {
             "one": {
                 "header": "CRUD Metronome",
-                "descriptor": "A fully functional metronome, complete with a database for storing song settings. Users can quickly save, load, edit, and delete to configure the metronome instantly."
+                "descriptor": "I built a metronome, complete with a database for storing song settings. Users can quickly save, load, edit, and delete to configure the metronome instantly."
             },
             "two": {
                 "header": "Music Quizzing Platform",
-                "descriptor": "An expandable database of custom-made quizzes, structured into sequential challenges for users to complete. A hearts system discourages brute-forcing answers. Complete with various audio-visual QnA formats, offering up to 6 different pairings."
+                "descriptor": "I built an expandable database of custom-made quizzes, structured into sequential challenges for users to complete. A hearts system discourages brute-forcing answers. Complete with various audio-visual QnA formats, offering up to 6 different pairings."
             }
         }
     }

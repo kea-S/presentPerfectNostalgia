@@ -4,7 +4,9 @@ function KeaHarvanBox() {
 
     return (
         <Box>
-            KeaHarvan
+            <header className='mx-2'>
+                <h1 className='antialiased font-semibold text-9xl'>Kea Harvan</h1>
+            </header>
         </Box>
     )
 }

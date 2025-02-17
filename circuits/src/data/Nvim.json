@@ -1,0 +1,21 @@
+{
+    "title": "NeoVim Config",
+    "role": "Professional Ricer",
+    "hyperlink": "https://re-verb-app.vercel.app",
+    "brief": "Configuration for my preferred code editor",
+    "stack": ["Linux", "Bash", "VimScript", "Lua"],
+    "descriptor": {
+        "media": "/nVim.png",
+        "detail": "After falling in love with Vim's worflow and finding most Vim motion plugins on IDE's unsatisfactory, I decided to switch over to editing on NeoVim after being indoctrinated by the likes of ThePrimeagen, typecraft, and DevOps Toolbox.",
+        "portfolios": {
+            "one": {
+                "header": "LSP and Autocomplete",
+                "descriptor": "Shoutout to williamboman for developing mason.nvim, a plugin that manages LSPs. hrsh7th for making a solid code completions engine, and L3MON4D3 for making LuaSnip. Without them on Github this editor wouldn't be that much different from Notepad."
+            },
+            "two": {
+                "header": "Built in ChatGPT",
+                "descriptor": "Currently using jackMort's ChatGPT.nvim for my LLM needs. Allowing me to use ChatGPT directly in my editor has saved me countless alt-tabs and mouse clicks - the Vim user's worst nightmare."
+            }
+        }
+    }
+}

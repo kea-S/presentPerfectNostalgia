@@ -1,11 +1,13 @@
-import Box from './box.tsx'
+interface ImageBoxProps {
+    image: string
+}
 
-function ImageBox() {
+function ImageBox({ image }: ImageBoxProps) {
 
     return (
-        <Box>
-            This is an ImageBox
-        </Box>
+        <div className="flex justify-center box-content w-72 sm:w-128 md:w-150 sm:h-60">
+            <img src={image} className="items-center p-6"/>
+        </div>
     )
 }
 

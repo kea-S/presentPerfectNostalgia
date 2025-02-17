@@ -36,7 +36,10 @@ export default {
                 '3xl': '1600px',
                 '4xl': '1920px',
             },
-        },
+            fontSize: {
+                '10xl': ['10', { lineHeight: '1rem' }]
+            }
+        }
     },
     plugins: [],
 }

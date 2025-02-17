@@ -1,0 +1,21 @@
+{
+    "title": "This",
+    "role": "Front End Work",
+    "hyperlink": "https://re-verb-app.vercel.app",
+    "brief": "A monument to my hubris",
+    "stack": ["React", "TailwindCSS", "TypeScript"],
+    "descriptor": {
+        "media": "/circuits.png",
+        "detail": "Built in the twilight hours of January and February in the year 2025 and inspired by the graphics on my laptop battery and Chia Amisola's portfolio website (chia.design) amongst other things, I made this website to refresh my React knowledge all the while familiarising myself with TypeScript and TailwindCSS - and to show off ofcourse.",
+        "portfolios": {
+            "one": {
+                "header": "",
+                "descriptor": ""
+            },
+            "two": {
+                "header": "",
+                "descriptor": ""
+            }
+        }
+    }
+}

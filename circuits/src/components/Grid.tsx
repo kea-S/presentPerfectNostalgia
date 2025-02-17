@@ -1,23 +1,30 @@
 import ImageBox from "./ImageBox"
 import KeaHarvanBox from "./KeaHarvanBox"
+import Box from "./box"
+import NavBar from "./navBar"
 import ProjectBox from "./ProjectBox"
 
 import { useState, useEffect } from "react"
 
 import reVerb from '../data/Orbital.json';
 import shep from '../data/Shep.json';
+import circuits from '../data/Circuits.json';
+import nVim from '../data/Nvim.json';
+import faceRecogniser from '../data/faceRecogniser.json';
+
+import ccLogo from '/cc.svg'
 
 function Grid() {
     const cells = [
         <KeaHarvanBox key="1" />,
-        <ProjectBox key="2" data={reVerb}/>,
-        <ProjectBox key="3" data={shep}/>,
+        <Box key="2" />,
+        <NavBar key="3"/>,
         <ProjectBox key="4" data={reVerb}/>,
-        <ProjectBox key="5" data={shep}/>,
-        <ImageBox key="6" />,
-        <ImageBox key="7" />,
-        <ProjectBox key="8" data={reVerb}/>,
-        <ProjectBox key="9" data={reVerb}/>,
+        <ProjectBox key="5" data={faceRecogniser}/>,
+        <ImageBox key="6" image={ccLogo}/>,
+        <ProjectBox key="7" data={circuits}/>,
+        <ProjectBox key="8" data={shep}/>,
+        <ProjectBox key="9" data={nVim}/>,
     ];
 
     const [numberCols, setNumberCols] = useState<number>(1)

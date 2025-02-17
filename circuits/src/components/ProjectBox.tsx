@@ -17,7 +17,7 @@ function ProjectBox({ data }: ProjectProps) {
     const handleMouseLeave = () => setIsModalOpen(false);
 
     return (
-        <div onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
+        <div className="mx-1" onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
             <Box>
                 <header className='mx-2 py-2'>
                     <h1 className='font-semibold text-5xl'>{data.title}</h1>
