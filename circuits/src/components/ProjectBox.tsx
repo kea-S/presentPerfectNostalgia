@@ -17,21 +17,24 @@ function ProjectBox({ data }: ProjectProps) {
     const handleMouseLeave = () => setIsModalOpen(false);
 
     return (
-        <div className="mx-1" onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
-            <Box>
-                <header className='mx-2 py-2'>
-                    <h1 className='font-semibold text-5xl'>{data.title}</h1>
-                </header>
-                <main className='my-5 mx-3'>
-                    <h2 className='text-lg font-medium'>{data.role}</h2>
-                    <p className='my-3 w-80'>{data.brief}</p>
-                </main>
-                <footer className='mx-2'>
-                    <List array={data.stack}/>
-                </footer>
-            </Box>
-            <ProjectModal isOpen={isModalOpen} descriptor={data.descriptor} title={data.title} footer={data.stack}/>
-        </div>
+        <a href={data.hyperlink} target="_blank" className="font-normal no-underline text-current
+            hover:no-underline hover:text-current">
+            <div className="mx-1" onMouseOver={handleMouseEnter} onMouseOut={handleMouseLeave}>
+                <Box>
+                    <header className='mx-2 py-2'>
+                        <h1 className='font-semibold text-5xl'>{data.title}</h1>
+                    </header>
+                    <main className='my-5 mx-3'>
+                        <h2 className='text-lg font-medium'>{data.role}</h2>
+                        <p className='my-3 w-80'>{data.brief}</p>
+                    </main>
+                    <footer className='mx-2'>
+                        <List array={data.stack}/>
+                    </footer>
+                </Box>
+                <ProjectModal isOpen={isModalOpen} descriptor={data.descriptor} title={data.title} footer={data.stack}/>
+            </div>
+        </a>
     )
 }
 

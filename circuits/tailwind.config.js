@@ -37,6 +37,7 @@ export default {
                 '4xl': '1920px',
             },
             fontSize: {
+                '8.5xl': ['7', { lineHeight: '1rem' }],
                 '10xl': ['10', { lineHeight: '1rem' }]
             }
         }

@@ -1,8 +1,8 @@
-import ImageBox from "./ImageBox"
+// import ImageBox from "./ImageBox"
 import KeaHarvanBox from "./KeaHarvanBox"
-import Box from "./box"
 import NavBar from "./navBar"
 import ProjectBox from "./ProjectBox"
+import Box from "./box"
 
 import { useState, useEffect } from "react"
 
@@ -12,16 +12,17 @@ import circuits from '../data/Circuits.json';
 import nVim from '../data/Nvim.json';
 import faceRecogniser from '../data/faceRecogniser.json';
 
-import ccLogo from '/cc.svg'
+// import ccLogo from '/cc.svg'
+import DescriptionBox from "./DescriptionBox"
 
 function Grid() {
     const cells = [
         <KeaHarvanBox key="1" />,
-        <Box key="2" />,
+        <DescriptionBox key="2" />,
         <NavBar key="3"/>,
         <ProjectBox key="4" data={reVerb}/>,
         <ProjectBox key="5" data={faceRecogniser}/>,
-        <ImageBox key="6" image={ccLogo}/>,
+        <Box key="6"/>,
         <ProjectBox key="7" data={circuits}/>,
         <ProjectBox key="8" data={shep}/>,
         <ProjectBox key="9" data={nVim}/>,

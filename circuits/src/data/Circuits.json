@@ -1,7 +1,7 @@
 {
     "title": "This",
     "role": "Front End Work",
-    "hyperlink": "https://re-verb-app.vercel.app",
+    "hyperlink": "https://github.com/kea-S/presentPerfectNostalgia",
     "brief": "A monument to my hubris",
     "stack": ["React", "TailwindCSS", "TypeScript"],
     "descriptor": {

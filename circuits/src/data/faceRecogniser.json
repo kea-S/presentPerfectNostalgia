@@ -1,7 +1,7 @@
 {
     "title": "Face Recogniser",
     "role": "AI Model Trainer",
-    "hyperlink": "https://re-verb-app.vercel.app",
+    "hyperlink": "https://www.adicitrasakti.com",
     "brief": "Facial recognition software under PT. ADI CITRA SAKTI",
     "stack": ["Python", "NumPy", "OpenCV", "PyTorch"],
     "descriptor": {
