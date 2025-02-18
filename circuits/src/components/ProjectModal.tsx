@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ProjectDescriptor } from '../types.ts';
 
 import Modal from './Modals.tsx';
@@ -11,6 +12,19 @@ interface ProjectModalProps {
 }
 
 function ProjectModal({ isOpen, descriptor, title, footer }: ProjectModalProps) {
+
+    function preLoad(img: string) {
+        return new Promise((resolve, reject) => {
+            const imageWrapper = new Image()
+            imageWrapper.src = img;
+            imageWrapper.onload = () => resolve("OK 200");
+            imageWrapper.onerror = (error) => reject(error);
+        })
+    }
+    // when descriptor.data changes (info ready), preload
+    useEffect(() => {
+        preLoad(descriptor.media).then(()=>console.log("loading image"));
+    }, [descriptor.media]);
 
     return (
         <Modal isOpen={isOpen}>
