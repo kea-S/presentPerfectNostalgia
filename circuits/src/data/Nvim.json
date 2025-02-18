@@ -1,6 +1,6 @@
 {
     "title": "NeoVim Config",
-    "role": "Professional Ricer",
+    "role": "Amateur Ricer",
     "hyperlink": "https://github.com/kea-S/KeaNeovim",
     "brief": "Configuration for my preferred code editor",
     "stack": ["Linux", "Bash", "VimScript", "Lua"],
