@@ -6,7 +6,7 @@
     "stack": ["React", "TailwindCSS", "TypeScript"],
     "descriptor": {
         "media": "/circuits.png",
-        "detail": "Built in the twilight hours of January and February in the year 2025 and inspired by the graphics on my laptop battery and Chia Amisola's portfolio website (chia.design) amongst other things, I made this website to refresh my React knowledge all the while familiarising myself with TypeScript and TailwindCSS - and to show off ofcourse.",
+        "detail": "Built in the twilight hours of January and February in the year 2025 and inspired by the graphics on my laptop battery and Chia Amisola's portfolio website (chia.design) amongst other things, I made this website to refresh my React knowledge all the while familiarising myself with TypeScript and TailwindCSS - and to show off of course.",
         "portfolios": {
             "one": {
                 "header": "",
