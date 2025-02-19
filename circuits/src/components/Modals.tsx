@@ -11,10 +11,10 @@ function Modal({ isOpen, children }: ModalProps) {
         <>
             {isOpen && 
                 <div style={{pointerEvents: "none"}}
-                    className="fixed top-1/2 left-1/2
+                    className="fixed z-20 top-1/2 left-1/2
                     transform -translate-x-1/2 -translate-y-1/2 
                     bg-black text-white w-192 h-176 border 
-                    [&_*]:!border-white !border-white p-4">
+                    [&_*]:!border-white !border-white p-4 hidden sm:block">
                     {children}
                 </div>}
         </>

@@ -17,37 +17,34 @@ import DescriptionBox from "./DescriptionBox"
 
 function Grid() {
     const cells = [
-        <KeaHarvanBox key="1" />,
-        <DescriptionBox key="2" />,
-        <NavBar key="3"/>,
-        <ProjectBox key="4" data={reVerb}/>,
-        <ProjectBox key="5" data={faceRecogniser}/>,
-        <Box key="6"/>,
-        <ProjectBox key="7" data={circuits}/>,
-        <ProjectBox key="8" data={shep}/>,
-        <ProjectBox key="9" data={nVim}/>,
+        <ProjectBox key="1" data={reVerb}/>,
+        <ProjectBox key="2" data={faceRecogniser}/>,
+        <Box key="3"/>,
+        <ProjectBox key="4" data={circuits}/>,
+        <ProjectBox key="5" data={shep}/>,
+        <ProjectBox key="6" data={nVim}/>,
     ];
 
-    const [numberCols, setNumberCols] = useState<number>(1)
+    const [numberCols, setNumberCols] = useState(1);
 
     useEffect(() => {
         const updateCols = (): void => {
             const width = window.innerWidth;
             switch (true) {
                 case width >= 1920:
-                    setNumberCols(3)
+                    setNumberCols(3);
                     break;
                 case width >= 1280:
-                    setNumberCols(2)
+                    setNumberCols(2);
                     break;
                 default:
-                    setNumberCols(1)
+                    setNumberCols(1);
                     break;
             }
         }
 
-        updateCols()
-        window.addEventListener('resize', updateCols)
+        updateCols();
+        window.addEventListener('resize', updateCols);
         return () => window.removeEventListener('resize', updateCols)}, []);
 
     const rows = [];
@@ -56,19 +53,34 @@ function Grid() {
     }
 
     return (
-        <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5 gap-y-12.5 mx-12.5 my-10">
-            {rows.map((row, rowIndex) => (
-                <div key={rowIndex} className={`col-span-full ${rowIndex % 2 === 1 ? 'bg-white text-black [&_*]:border-black' 
-: 'bg-black text-white [&_*]:border-white'}`}>
-                    <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5">
-                        {row.map((item, colIndex) => (
-                            <div key={colIndex}>
-                                {item}
-                            </div>
-                        ))}
-                    </div>
+        <div className="min-h-screen flex flex-col">
+            <header className="sticky top-0 bg-black z-10 pb-12.5">
+                <div className={`grid grid-cols-2 4xl:grid-cols-3 gap-x-2.5 gap-y-12.5 mx-12.5 mt-10 ${numberCols == 1 ? "bg-white" : ""}`}>
+                    <KeaHarvanBox />
+                    {numberCols == 3 ? <DescriptionBox /> : null}
+                    <NavBar />
                 </div>
-            ))}
+            </header>
+
+            <main className="flex-1">
+                <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5 gap-y-12.5 mx-12.5">
+                    {rows.map((row, rowIndex) => (
+                        <div 
+                            key={rowIndex} 
+                            className={`col-span-full ${
+rowIndex % 2 === 0
+? 'bg-white text-black [&_*]:border-black' 
+: 'bg-black text-white [&_*]:border-white'
+}`}>
+                            <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5">
+                                {row.map((item, colIndex) => (
+                                    <div key={colIndex}>{item}</div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </main>
         </div>
     )
 }

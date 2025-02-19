@@ -7,7 +7,7 @@ function List({ array }: ListProps) {
     return (
         <div className="flex">
             {array.map((str) => (
-                <div className="border p-1 m-1">
+                <div className="text-xs md:text-base border p-1 m-1">
                     {str}
                 </div>
             ))}

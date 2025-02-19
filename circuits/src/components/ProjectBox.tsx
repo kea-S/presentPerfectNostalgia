@@ -26,7 +26,7 @@ function ProjectBox({ data }: ProjectProps) {
                     </header>
                     <main className='my-5 mx-3'>
                         <h2 className='text-lg font-medium'>{data.role}</h2>
-                        <p className='my-3 w-80'>{data.brief}</p>
+                        <p className='my-3 w-40 md:w-80'>{data.brief}</p>
                     </main>
                     <footer className='mx-2'>
                         <List array={data.stack}/>
