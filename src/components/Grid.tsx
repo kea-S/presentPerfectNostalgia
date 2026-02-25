@@ -27,7 +27,7 @@ function Grid() {
         <ProjectBox key="5" data={faceRecogniser}/>,
         <ProjectBox key="6" data={circuits}/>,
         <ProjectBox key="7" data={shep}/>,
-        <Box key="8"/>,
+        <ProjectBox key="8" data={reVerb}/>,
         <ProjectBox key="9" data={nVim}/>,
     ];
 
