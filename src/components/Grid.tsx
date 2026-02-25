@@ -11,18 +11,24 @@ import shep from '../data/Shep.json';
 import circuits from '../data/Circuits.json';
 import nVim from '../data/Nvim.json';
 import faceRecogniser from '../data/faceRecogniser.json';
+import ragTester from '../data/ragTester.json';
+import courseRecommender from '../data/courseRecommender.json';
+import agenticRegressionTester from '../data/agenticRegressionTester.json';
 
 // import ccLogo from '/cc.svg'
 import DescriptionBox from "./DescriptionBox"
 
 function Grid() {
     const cells = [
-        <ProjectBox key="1" data={reVerb}/>,
-        <ProjectBox key="2" data={faceRecogniser}/>,
-        <Box key="3"/>,
-        <ProjectBox key="4" data={circuits}/>,
-        <ProjectBox key="5" data={shep}/>,
-        <ProjectBox key="6" data={nVim}/>,
+        <ProjectBox key="1" data={ragTester}/>,
+        <ProjectBox key="2" data={agenticRegressionTester}/>,
+        <ProjectBox key="3" data={courseRecommender}/>,
+        <Box key="4"/>,
+        <ProjectBox key="5" data={faceRecogniser}/>,
+        <ProjectBox key="6" data={circuits}/>,
+        <ProjectBox key="7" data={shep}/>,
+        <Box key="8"/>,
+        <ProjectBox key="9" data={nVim}/>,
     ];
 
     const [numberCols, setNumberCols] = useState(1);
@@ -63,16 +69,16 @@ function Grid() {
             </header>
 
             <main className="flex-1">
-                <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5 gap-y-12.5 mx-12.5">
+                <div className="grid grid-cols-1 gap-x-2.5 gap-y-12.5 mx-12.5">
                     {rows.map((row, rowIndex) => (
                         <div 
                             key={rowIndex} 
                             className={`col-span-full ${
-rowIndex % 2 === 0
-? 'bg-white text-black [&_*]:border-black' 
-: 'bg-black text-white [&_*]:border-white'
-}`}>
-                            <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5">
+                                rowIndex % 2 === 0
+                                ? 'bg-white text-black [&_*]:border-black' 
+                                : 'bg-black text-white [&_*]:border-white'
+                            }`}>
+                            <div className="grid grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-x-2.5 gap-y-12.5">
                                 {row.map((item, colIndex) => (
                                     <div key={colIndex}>{item}</div>
                                 ))}
@@ -83,6 +89,7 @@ rowIndex % 2 === 0
             </main>
         </div>
     )
+
 }
 
 export default Grid

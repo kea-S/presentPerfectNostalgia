@@ -1,0 +1,21 @@
+{
+  "title": "Agentic App Tester",
+  "role": "Mobile QA Engineer",
+  "hyperlink": "https://github.com/AbiHalim/LLM-UI-Tester",
+  "brief": "An agentic mobile UI tester that converts natural-language test steps into actions",
+  "stack": ["Google ADK", "Pydantic", "OpenCV"],
+  "descriptor": {
+    "media": "/agenticMobileApp.png",
+    "detail": "Implemented an agentic regression testing system that translates NL test steps into validated UI actions, captures in-progress screenshots for CV-based state verification, and produces detailed regression reports measuring flakiness and time-to-detect.",
+    "portfolios": {
+      "one": {
+        "header": "Natural-language to executable UI actions",
+        "descriptor": "Used a modular MLLM to map free-form test steps into typed action schemas. Schemas are validated with Pydantic to prevent invalid interactions and reduce test failures caused by malformed actions."
+      },
+      "two": {
+        "header": "End-to-end testing pipeline with CV verification",
+        "descriptor": "Designed a pipeline that captures screenshots during execution and feeds them into a CV system using OpenCV for image-difference detection and state validation to confirm successful UI transitions."
+      }
+    }
+  }
+}

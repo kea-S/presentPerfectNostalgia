@@ -1,0 +1,21 @@
+{
+  "title": "Module Recommendation System",
+  "role": "Machine Learning Engineer",
+  "hyperlink": "https://github.com/kea-S/ModRecco",
+  "brief": "Course recommender for NUS mods",
+  "stack": ["PostgreSQL", "pgvector", "FastAPI"],
+  "descriptor": {
+    "media": "/moduleRecommender.png",
+    "detail": "Built an embedding-backed recommender that stores module embeddings in pgvector and performs nearest-neighbour retrieval to surface content-similar modules. Implemented content-based ranking to mitigate cold-start and evaluated recommendations against historical course data.",
+    "portfolios": {
+      "one": {
+        "header": "Embedding-backed similarity search",
+        "descriptor": "Computed module embeddings using a sentence-transformer and stored them in PostgreSQL with pgvector. Tuned ANN index and distance metrics for fast, accurate nearest-neighbour queries."
+      },
+      "two": {
+        "header": "Cold-start content-based ranking",
+        "descriptor": "Designed content-based ranking signals (syllabus, learning outcomes, tags) to generate recommendations for new modules with little or no interaction data, reducing dependence on collaborative signals."
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "title": "RAG Framework",
+    "role": "Full Stack Developer",
+    "hyperlink": "https://github.com/kea-S/SGTradeClassificationRagBot",
+    "brief": "An inter-LLM evaluator for different complicated RAG workflows",
+    "stack": ["LlamaIndex", "Ragas", "Promptfoo"],
+    "descriptor": {
+        "media": "/ragTester.png",
+        "detail": "This framework was built to benchmark and explore how well different LLM providers, retrieval strategies, prompts, and agentic architectures worked on complicated legal documents. Metrics like retrieval accuracy, latency, and cost per query were measured.",
+        "portfolios": {
+            "one": {
+                "header": "Unstructured to structured Parser",
+                "descriptor": "Legal documents often come in unstructured PDF formats. The conversion of PDF formats to structured LLM understandable text has been a known and well explored problem in the space, including rules based, computer-vision based, natural language based, and LLM based strategies. For initial exploration, I used the rules based pymupdf library to parse the documents, but through further research, computer-vision based approaches might be more fruitful."
+            },
+            "two": {
+                "header": "Agent module",
+                "descriptor": "An explainable naive function calling agent whose LLM provider can be modularly replaced."
+            },
+            "three": {
+                "header": "Tool module",
+                "descriptor": "An explainable naive tool calling module complete with the RAG based tool."
+            }
+        }
+    }
+}
